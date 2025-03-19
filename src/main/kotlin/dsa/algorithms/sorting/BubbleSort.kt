@@ -3,10 +3,10 @@ package org.frokanic.dsa.algorithms.sorting
 /**
  *  Time Complexity: O(n^2)
  *
- *  In bubble sort, we start by going through all of the array, and comparing
+ *  In bubble sort, we start by going through all of the array, comparing
  *  the elements in pairs, linearly, and switching them, if the first element
  *  of the pair we're comparing is larger that the second element. The idea
- *  behind it is that at some point we will come across the largest one and
+ *  behind it is, that at some point, we will come across the largest one and
  *  bring it, "bubble it", to the top.
  *
  *  After a successful iteration we will have the largest item to the top.
@@ -23,6 +23,8 @@ fun main() {
     bubbleSortExamples(2, arrayOf(1, 2, 4, 9, 15, 23))
     println()
     bubbleSortExamples(3, arrayOf(90, 80, 7, 6, 4))
+    println()
+    bubbleSortExamples(4, arrayOf(2, 7, 3, 1, 5, 3))
 }
 
 fun Array<Int>.bubbleSort() {
@@ -42,7 +44,7 @@ fun Array<Int>.bubbleSort() {
     }
 }
 
-fun bubbleSortExamples(
+private fun bubbleSortExamples(
     noOfExample: Int,
     array: Array<Int>
 ) {
