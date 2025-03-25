@@ -22,13 +22,14 @@ fun main() {
 
 fun Array<Int>.insertionSort() {
 
-    for (i in 2..<this.size) {
-        for (j in i - 1 downTo 1) {
-            if (this[i] >= this[j]) break
+    for (i in 1 until this.size) {
 
-            val temp = this[i]
-            this[i] = this[j]
-            this[j] = temp
+        for (j in i downTo 1) {
+            if (this[j] >= this[j - 1]) break
+
+            val temp = this[j]
+            this[j] = this[j - 1]
+            this[j - 1] = temp
         }
     }
 }
